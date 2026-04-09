@@ -1,0 +1,138 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Employees
+# @name Employees_GET
+GET {{server}}/odata/v4/catalog/Employees
+Authorization: Basic {{username}}:{{password}}
+
+
+### Employees
+# @name Employees_POST
+POST {{server}}/odata/v4/catalog/Employees
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "name": "name-937024",
+  "role": "role-937024",
+  "yearsExp": 73,
+  "targetRole": "targetRole-937024",
+  "currentSkills": "Communication: Effectively sharing ideas through writing, speaking, and active listening.\nProblem-Solving: Identifying the root cause of issues and implementing efficient solutions.\nCritical Thinking: Evaluating facts and using reasoning to make informed, objective decisions.\nAdaptability & Resilience: Staying productive through change and viewing setbacks as growth opportunities.\nTeamwork & Collaboration: Working seamlessly with others toward a common goal.\nLeadership: Motivating, mentoring, and guiding others, even without a formal managerial title.",
+    "department": {
+    "ID": "Departments-14983430"
+  }
+}
+
+
+### Employees
+# @name Employees_PATCH
+PATCH {{server}}/odata/v4/catalog/Employees/93702422-036b-4165-a7a0-4d35d56c9aa9
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "93702422-036b-4165-a7a0-4d35d56c9aa9",
+  "name": "name-937024",
+  "role": "role-937024",
+  "yearsExp": 73,
+  "targetRole": "targetRole-937024",
+  "department": {
+    "ID": "Departments-14983430"
+  }
+}
+
+
+### Employees
+# @name Employees_DELETE
+DELETE {{server}}/odata/v4/catalog/Employees/93702422-036b-4165-a7a0-4d35d56c9aa9
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Departments
+# @name Departments_GET
+GET {{server}}/odata/v4/catalog/Departments
+Authorization: Basic {{username}}:{{password}}
+
+
+### Departments
+# @name Departments_POST
+POST {{server}}/odata/v4/catalog/Departments
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "Departments-14983430",
+  "name": "name-14983430",
+  "manager": "manager-14983430"
+}
+
+
+### Departments
+# @name Departments_PATCH
+PATCH {{server}}/odata/v4/catalog/Departments/Departments-14983430
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "Departments-14983430",
+  "name": "name-14983430",
+  "manager": "manager-14983430"
+}
+
+
+### Departments
+# @name Departments_DELETE
+DELETE {{server}}/odata/v4/catalog/Departments/Departments-14983430
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### SkillAssessments
+# @name SkillAssessments_GET
+GET {{server}}/odata/v4/catalog/SkillAssessments
+Authorization: Basic {{username}}:{{password}}
+
+
+### SkillAssessments
+# @name SkillAssessments_POST
+POST {{server}}/odata/v4/catalog/SkillAssessments
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "SkillAssessments-13037325",
+  "employee": {
+    "ID": "93702422-036b-4165-a7a0-4d35d56c9aa9"
+  },
+  "generatedAt": "2008-01-07T00:00:00.000Z",
+  "gapAnalysis": "gapAnalysis-13037325",
+  "recommendedCourses": "recommendedCourses-13037325"
+}
+
+
+### SkillAssessments
+# @name SkillAssessments_PATCH
+PATCH {{server}}/odata/v4/catalog/SkillAssessments/SkillAssessments-13037325
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "SkillAssessments-13037325",
+  "employee": {
+    "ID": "93702422-036b-4165-a7a0-4d35d56c9aa9"
+  },
+  "generatedAt": "2008-01-07T00:00:00.000Z",
+  "gapAnalysis": "gapAnalysis-13037325",
+  "recommendedCourses": "recommendedCourses-13037325"
+}
+
+
+### SkillAssessments
+# @name SkillAssessments_DELETE
+DELETE {{server}}/odata/v4/catalog/SkillAssessments/SkillAssessments-13037325
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

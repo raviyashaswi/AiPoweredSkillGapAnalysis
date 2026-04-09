@@ -1,0 +1,4 @@
+ID,employee_ID,generatedAt,gapAnalysis,recommendedCourses
+SA-001,e1f7c7b0-1234-4a55-8b6a-1234567890ab,2026-04-01T10:00:00Z,Lacks Cloud Native design patterns,SAP BTP Extension Suite
+SA-002,f2a8d8c1-5678-4b66-9c7b-2345678901bc,2026-04-02T14:30:00Z,Needs deeper understanding of local labor laws,Advanced HR Compliance
+SA-003,a3b9e9d2-9012-4c77-0d8c-3456789012cd,2026-04-03T09:15:00Z,Needs experience with CAP and Node.js,Full-Stack Development with CAP
