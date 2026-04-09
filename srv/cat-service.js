@@ -4,7 +4,6 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY || "gsk_jhoHwHpg2UPiydg
 
 
 
-
 module.exports = class CatalogService extends cds.ApplicationService {
     init() {
         const { SkillAssessments } = this.entities('com.candy.app')

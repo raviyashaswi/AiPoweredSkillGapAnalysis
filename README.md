@@ -165,17 +165,10 @@ Respond ONLY in valid JSON format.
 
 ```json
 {
-  "skillGaps": [
-    { "skill": "string", "priority": "High | Medium | Low", "category": "string" }
-  ],
-  "courses": [
-    { "title": "string", "platform": "string", "url": "string", "duration": "string" }
-  ],
-  "roadmap": {
-    "month1": { "focus": "string", "milestones": ["string"] },
-    "month2": { "focus": "string", "milestones": ["string"] },
-    "month3": { "focus": "string", "milestones": ["string"] }
-  }
+    "greet":"...",
+    "gapAnalysis": "...",
+    "recommendedCourses": "...",
+    "roadmap": "..."
 }
 ```
 
@@ -232,9 +225,7 @@ Create a `.env` file in the root directory:
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
-HANA_HOST=your_hana_host
-HANA_USER=your_hana_user
-HANA_PASSWORD=your_hana_password
+
 ```
 
 ### 4. Deploy the Database
@@ -281,6 +272,10 @@ cf deploy mta_archives/AiPoweredSkillGapAnalysis_1.0.0.mtar
 cf apps
 cf services
 ```
+
+### Step 5: Access the Application
+Once deployed, the Fiori app is available at:
+https://3da981b6trial.launchpad.cfapps.us10.hana.ondemand.com/5827f2eb-6475-4749-adaa-da4ce637f6ef.comcandyappskillgapanalysisfiori.comcandyappskillgapanalysisfiori-0.0.1/index.html
 
 ---
 
@@ -350,8 +345,8 @@ AiPoweredSkillGapAnalysis/
   "currentRole": "Junior Developer",
   "targetRole": "Full Stack Engineer",
   "yearsOfExperience": 2,
-  "currentSkills": ["JavaScript", "HTML", "CSS", "Git"],
-  "department": "Engineering"
+  "currentSkills": "JavaScript, HTML, CSS, Git",
+  "department": "IT"
 }
 ```
 
@@ -362,7 +357,7 @@ AiPoweredSkillGapAnalysis/
 ### Base URL
 
 ```
-https://<app-url>/odata/v4/SkillGapService
+https://3da981b6trial-dev-aipoweredskillgapanalysis-srv.cfapps.us10-001.hana.ondemand.com/
 ```
 
 ### Key Endpoints
